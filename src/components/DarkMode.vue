@@ -2,7 +2,7 @@
   <a
     v-on:click="toggleTheme()"
     aria-label="Toggle dark mode"
-    class="navbar-item is-inline-block-mobile"
+    class="navbar-item navbar-item-nobg is-inline-block-mobile"
   >
     <i
       :class="`${faClasses[mode]}`"
@@ -15,6 +15,9 @@
 <script>
 export default {
   name: "Darkmode",
+  props: {
+    colorSwitch: Object,
+  },
   data: function () {
     return {
       isDark: null,
@@ -24,12 +27,16 @@ export default {
     };
   },
   created: function () {
-    this.faClasses = ["fas fa-adjust", "fas fa-circle", "far fa-circle"];
-    this.titles = ["Auto-switch", "Light theme", "Dark theme"];
+    this.faClasses = ["fas fa-adjust", "fas fa-sun", "fas fa-moon"];
+    this.titles = ["Auto", "Light Theme", "Dark Theme"];
     this.mode = 0;
     if ("overrideDark" in localStorage) {
       // Light theme is 1 and Dark theme is 2
       this.mode = JSON.parse(localStorage.overrideDark) ? 2 : 1;
+    }
+    // Force specific color mode if defined
+    if (this.colorSwitch.forceMode) {
+      this.mode = this.colorSwitch.forceMode;
     }
     this.isDark = this.getIsDark();
     this.$emit("updated", this.isDark);

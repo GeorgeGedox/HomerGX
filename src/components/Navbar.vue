@@ -1,5 +1,5 @@
 <template>
-  <div v-cloak v-if="links" class="container-fluid">
+  <div v-cloak v-show="links" class="container-fluid">
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="container">
         <div class="navbar-brand">

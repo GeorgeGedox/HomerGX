@@ -12,15 +12,21 @@
     <div id="bighead">
       <section v-if="config.header" class="first-line">
         <div v-cloak class="container">
-          <div class="logo">
-            <a href="#">
-              <img v-if="config.logo" :src="config.logo" alt="dashboard logo" />
-            </a>
-            <i v-if="config.icon" :class="config.icon"></i>
-          </div>
-          <div class="dashboard-title">
-            <span class="headline">{{ config.subtitle }}</span>
-            <h1>{{ config.title }}</h1>
+          <div class="header-wrapper">
+            <div class="logo">
+              <a href="#">
+                <img
+                  v-if="config.logo"
+                  :src="config.logo"
+                  alt="dashboard logo"
+                />
+              </a>
+              <i v-if="config.icon" :class="config.icon"></i>
+            </div>
+            <div class="dashboard-title">
+              <span class="headline">{{ config.subtitle }}</span>
+              <h1>{{ config.title }}</h1>
+            </div>
           </div>
         </div>
       </section>
@@ -30,17 +36,24 @@
         :links="config.links"
         @navbar-toggle="showMenu = !showMenu"
       >
-        <DarkMode @updated="isDark = $event" />
+        <DarkMode
+          @updated="isDark = $event"
+          :colorSwitch="config.colorSwitch"
+          v-show="!config.colorSwitch.hideButton"
+        />
 
         <SettingToggle
           @updated="vlayout = $event"
           name="vlayout"
           icon="fa-list"
           iconAlt="fa-columns"
+          :layoutSwitch="config.layoutSwitch"
+          v-show="!config.layoutSwitch.hideButton"
         />
 
         <SearchInput
-          class="navbar-item is-inline-block-mobile"
+          class="navbar-item navbar-item-nobg is-inline-block-mobile"
+          v-if="config.search"
           @input="filterServices"
           @search-focus="showMenu = true"
           @search-open="navigateToFirstService"
@@ -61,8 +74,12 @@
 
           <!-- Horizontal layout -->
           <div v-if="!vlayout || filter" class="columns is-multiline">
-            <template v-for="group in services">
-              <h2 v-if="group.name" class="column is-full group-title">
+            <template v-for="(group, groupIndex) in services">
+              <h2
+                v-if="group.name"
+                class="column is-full group-title"
+                :key="group.name"
+              >
                 <i v-if="group.icon" :class="['fa-fw', group.icon]"></i>
                 <div v-else-if="group.logo" class="group-logo media-left">
                   <figure class="image is-48x48">
@@ -73,7 +90,7 @@
               </h2>
               <Service
                 v-for="(item, index) in group.items"
-                :key="index"
+                :key="'group-' + groupIndex + '-' + index"
                 :item="item"
                 :proxy="config.proxy"
                 :class="['column', `is-${12 / config.columns}`]"
@@ -88,7 +105,7 @@
           >
             <div
               :class="['column', `is-${12 / config.columns}`]"
-              v-for="group in services"
+              v-for="(group, groupIndex) in services"
               :key="group.name"
             >
               <h2 v-if="group.name" class="group-title">
@@ -102,7 +119,7 @@
               </h2>
               <Service
                 v-for="(item, index) in group.items"
-                :key="index"
+                :key="'group-' + groupIndex + '-' + index"
                 :item="item"
                 :proxy="config.proxy"
               />
@@ -137,7 +154,7 @@ import SettingToggle from "./components/SettingToggle.vue";
 import DarkMode from "./components/DarkMode.vue";
 import DynamicTheme from "./components/DynamicTheme.vue";
 
-import defaultConfig from "./assets/defaults.yml";
+import defaultConfig from "./defaults.yml";
 
 export default {
   name: "App",

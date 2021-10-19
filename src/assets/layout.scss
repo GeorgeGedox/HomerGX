@@ -1,0 +1,134 @@
+html {
+  height: 100%;
+}
+
+html, body, body #app {
+  background-color: var(--background);
+}
+
+body {
+  min-height: 100%;
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#app {
+  flex: 1;
+  background: var(--background-image);
+  background-size: cover !important;
+  background-position: center;
+  color: var(--text);
+  transition: background-color cubic-bezier(0.165, 0.84, 0.44, 1) 300ms;
+
+  &.is-light {
+    .navbar-item.navbar-item-nobg {
+      color: var(--highlight-primary) !important;
+
+      &:hover {
+        color: var(--highlight-hover) !important;
+      }
+    }
+  }
+}
+
+#main-section {
+  margin-bottom: 2rem;
+  padding: 0;
+
+  .column {
+    padding: 0.25rem;
+  }
+
+  h2 {
+    padding-bottom: 0px;
+    @include ellipsis();
+  }
+
+  .title {
+    font-size: 1.1em;
+    line-height: 1.2em;
+    @include ellipsis();
+  }
+
+  .subtitle {
+    font-size: 0.9em;
+    @include ellipsis();
+  }
+
+  .container {
+    padding: 1.2rem 0.75rem;
+  }
+
+  .message {
+    margin-top: 45px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+    background-color: var(--background);
+
+    .message-header {
+      font-weight: bold;
+    }
+
+    .message-body {
+      color: var(--text);
+      border: none;
+    }
+  }
+}
+
+.layout-vertical {
+  .card {
+    border-radius: 0;
+  }
+
+  .column div:first-of-type .card {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+
+  .column div:last-child .card {
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem;
+  text-align: left;
+  color: #676767;
+  font-size: 0.85rem;
+  transition: background-color cubic-bezier(0.165, 0.84, 0.44, 1) 300ms;
+  background-color: var(--footer-background);
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.no-footer {
+  #main-section {
+    margin-bottom: 0;
+  }
+
+  .footer {
+    display: none;
+  }
+}
+
+.offline-message {
+  text-align: center;
+  margin: 35px 0;
+
+  i {
+    font-size: 2rem;
+  }
+
+  i.fa-redo-alt {
+    font-size: 1.3rem;
+    line-height: 1rem;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #3273dc;
+  }
+}

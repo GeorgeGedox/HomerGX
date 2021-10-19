@@ -5,35 +5,35 @@
   "start_url": "../",
   "icons": [
     {
-      "src": "./icons/favicon-16x16.png",
+      "src": "./favicons/favicon-16x16.png",
       "sizes": "16x16",
       "type": "image/png"
     },
     {
-      "src": "./icons/favicon-32x32.png",
+      "src": "./favicons/favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "./icons/icon-any.png",
+      "src": "./favicons/icon-any.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "./icons/icon-any.svg",
+      "src": "./favicons/icon-any.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
-      "src": "./icons/icon-maskable.png",
+      "src": "./favicons/icon-maskable.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "./icons/safari-pinned-tab.svg",
+      "src": "./favicons/safari-pinned-tab.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "monochrome"

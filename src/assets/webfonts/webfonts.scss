@@ -1,23 +1,85 @@
-/* raleway-regular - latin */
+// Generated using https://google-webfonts-helper.herokuapp.com
+
+/* nunito-300 - latin */
 @font-face {
-  font-family: "Raleway";
+  font-family: 'Nunito';
   font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Raleway"), local("Raleway-Regular"),
-    url("./webfonts/raleway/raleway-v14-latin-regular.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("./webfonts/raleway/raleway-v14-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-weight: 300;
+  src: url('./webfonts/nunito/nunito-v16-latin-300.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('./webfonts/nunito/nunito-v16-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./webfonts/nunito/nunito-v16-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./webfonts/nunito/nunito-v16-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('./webfonts/nunito/nunito-v16-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./webfonts/nunito/nunito-v16-latin-300.svg#Nunito') format('svg'); /* Legacy iOS */
 }
 
-/* lato-regular - latin */
+/* nunito-regular - latin */
 @font-face {
-  font-family: "Lato";
+  font-family: 'Nunito';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: local("Lato Regular"), local("Lato-Regular"),
-    url("./webfonts/lato/lato-v16-latin-regular.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("./webfonts/lato/lato-v16-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url('./webfonts/nunito/nunito-v16-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('./webfonts/nunito/nunito-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./webfonts/nunito/nunito-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./webfonts/nunito/nunito-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./webfonts/nunito/nunito-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./webfonts/nunito/nunito-v16-latin-regular.svg#Nunito') format('svg'); /* Legacy iOS */
+}
+
+/* nunito-700 - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./webfonts/nunito/nunito-v16-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('./webfonts/nunito/nunito-v16-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./webfonts/nunito/nunito-v16-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./webfonts/nunito/nunito-v16-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('./webfonts/nunito/nunito-v16-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./webfonts/nunito/nunito-v16-latin-700.svg#Nunito') format('svg'); /* Legacy iOS */
+}
+
+/* rubik-300 - latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./webfonts/rubik/rubik-v14-latin-300.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('./webfonts/rubik/rubik-v14-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./webfonts/rubik/rubik-v14-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./webfonts/rubik/rubik-v14-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('./webfonts/rubik/rubik-v14-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./webfonts/rubik/rubik-v14-latin-300.svg#Rubik') format('svg'); /* Legacy iOS */
+}
+
+/* rubik-regular - latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./webfonts/rubik/rubik-v14-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('./webfonts/rubik/rubik-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./webfonts/rubik/rubik-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./webfonts/rubik/rubik-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./webfonts/rubik/rubik-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./webfonts/rubik/rubik-v14-latin-regular.svg#Rubik') format('svg'); /* Legacy iOS */
+}
+
+/* rubik-600 - latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./webfonts/rubik/rubik-v14-latin-600.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('./webfonts/rubik/rubik-v14-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./webfonts/rubik/rubik-v14-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./webfonts/rubik/rubik-v14-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('./webfonts/rubik/rubik-v14-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./webfonts/rubik/rubik-v14-latin-600.svg#Rubik') format('svg'); /* Legacy iOS */
 }

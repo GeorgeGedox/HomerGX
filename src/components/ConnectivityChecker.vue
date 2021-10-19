@@ -3,7 +3,7 @@
     <i class="far fa-dizzy"></i>
     <h1>
       You're offline friend.
-      <span @click="checkOffline"> <i class="fas fa-redo-alt"></i></span>
+      <span @click="checkOffline"><i class="fas fa-redo-alt"></i></span>
     </h1>
   </div>
 </template>

@@ -26,8 +26,6 @@ export default {
         let value = `${theme[themeVars]}`;
         if (!value) {
           value = "initial";
-        } else if (themeVars == "background-image") {
-          value = `url(${theme[themeVars]})`;
         }
         vars.push(`--${themeVars}: ${value}`);
       }

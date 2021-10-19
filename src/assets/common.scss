@@ -1,0 +1,40 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+
+  .fas,
+  .fab,
+  .far {
+    margin-right: 10px;
+  }
+
+  span {
+    font-weight: bold;
+    color: var(--highlight-secondary);
+  }
+}
+
+[v-cloak] {
+  display: none;
+}
+
+a {
+  color: var(--link);
+  &:hover {
+    color: var(--link-hover);
+  }
+}

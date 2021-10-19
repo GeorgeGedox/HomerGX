@@ -1,0 +1,120 @@
+#bighead {
+  color: var(--text-header);
+
+  .first-line {
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .header-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 3rem 0;
+
+    .dashboard-title {
+      justify-content: center;
+      display: flex;
+      flex-flow: column nowrap;
+
+      > span {
+        font-size: 0.9rem;
+        line-height: 1;
+      }
+
+      > h1 {
+        font-family: "Rubik", sans-serif;
+        font-size: 2rem;
+        line-height: 1;
+      }
+    }
+
+    .logo {
+      i {
+        padding: 0 15px;
+        font-size: 50px;
+        line-height: 1.15;
+      }
+
+      img {
+        padding: 10px;
+        max-height: 70px;
+        max-width: 70px;
+      }
+    }
+  }
+
+  .navbar {
+    background-color: transparent;
+
+    .navbar-item {
+      background-color: var(--highlight-primary);
+      border-radius: var(--border-radius);
+      color: var(--link) !important;
+      padding: 8px 12px;
+      margin-right: 0.3rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        background-color: var(--highlight-hover);
+        color: var(--link-hover) !important;
+      }
+
+      &.navbar-item-nobg {
+        background: none !important;
+      }
+    }
+
+    .navbar-menu {
+      background-color: inherit;
+    }
+
+    .search-bar {
+      position: relative;
+      display: inline-block;
+
+      input {
+        border: none;
+        background-color: var(--card-background);
+        border-radius: 5px;
+        margin-top: 2px;
+        padding: 2px 12px 2px 30px;
+        transition: all 100ms linear;
+        color: #ffffff;
+        height: 30px;
+        width: 100px;
+        outline: none;
+    
+        &:focus {
+          color: #000000;
+          width: 250px;
+          background-color: #ffffff;
+        }
+      }
+    
+      .search-label::before {
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        top: 14px;
+        left: 16px;
+        content: "\f002";
+        font-weight: 900;
+        width: 20px;
+        height: 20px;
+        color: var(--link);
+      }
+    
+      &:focus-within .search-label::before {
+        color: var(--highlight-primary);
+      }
+    }
+
+    .navbar-end {
+      text-align: right;
+    }
+  }
+}
