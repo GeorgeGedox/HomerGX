@@ -2,20 +2,14 @@
  <img
   width="180"
   alt="Homer's donut"
-  src="https://raw.githubusercontent.com//bastienwirtz/homer/main/public/logo.png">
+  src="https://raw.githubusercontent.com/GeorgeGedox/HomerGX/master/public/logo.png">
     <br/>
-    Homer
+    HomerGX
 </h1>
-
-<h4 align="center">
- A dead simple static <strong>HOM</strong>epage for your serv<strong>ER</strong> to keep your services on hand, from a simple <code>yaml</code> configuration file.
-</h4>
 
 <p align="center">
  <strong>
    <a href="https://homer-demo.netlify.app">Demo</a>
-  •
-  <a href="https://gitter.im/homer-dashboard/community">Chat</a>
   •
   <a href="#getting-started">Getting started</a>
  </strong>
@@ -24,24 +18,20 @@
  <a href="https://opensource.org/licenses/Apache-2.0"><img
   alt="License: Apache 2"
   src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"></a>
-  <a href="https://gitter.im/homer-dashboard/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img
-  alt="Gitter chat"
-  src="https://badges.gitter.im/homer-dashboard/community.svg"></a>
-  <a href="https://github.com/bastienwirtz/homer/releases/latest/download/homer.zip"><img
-  alt="Download homer static build"
-  src="https://img.shields.io/badge/Download-homer.zip-orange"></a>
- <a href="https://github.com/awesome-selfhosted/awesome-selfhosted"><img
-  alt="Awesome"
-  src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"></a>
 </p>
 
-<p align="center">
- <img src="https://raw.github.com/bastienwirtz/homer/main/docs/screenshot.png" width="100%">
-</p>
+<details open>
+<summary>Light Mode Preview</summary>
+  <img alt="Homer Theme" src="https://raw.githubusercontent.com/GeorgeGedox/HomerGX/master/docs/screenshot-light.png">
+</details>
+<details>
+<summary>Dark Mode Preview</summary>
+  <img alt="Homer Theme" src="https://raw.githubusercontent.com/GeorgeGedox/HomerGX/master/docs/screenshot-dark.png">
+</details>
 
 ## Table of Contents
 
-- [Features](#features)
+- [Features over the original](#features)
 - [Getting started](#getting-started)
 - [Configuration](docs/configuration.md)
 - [Custom services](docs/customservices.md)
@@ -49,23 +39,25 @@
 - [Development](docs/development.md)
 - [Troubleshooting](docs/troubleshooting.md)
 
-## Features
+## Features over the original
 
-- [yaml](http://yaml.org/) file configuration
-- Installable (pwa)
-- Search
-- Grouping
-- Theme customization
-- Offline heath check
-- keyboard shortcuts:
-  - `/` Start searching.
-  - `Escape` Stop searching.
-  - `Enter` Open the first matching result (respects the bookmark's `_target` property).
-  - `Alt`/`Option` + `Enter` Open the first matching result in a new tab.
+The project was forked at version `v21.09.2`, some of the things below might not hold true anymore
+
+- Cleaner code
+- Color mode can be forced(light/dark/auto) and the button can be hidden
+- Layout can be forced vertical/horizontal and the button can be hidden
+- Search can be disabled
+- Modern theme already bundled in
+
+### Planned features
+
+- [Authentik](https://goauthentik.io/) integration
+- More services
+- More bundled themes
 
 ## Getting started
 
-Homer is a full static html/js dashboard, generated from the source in `/src` using webpack. It's meant to be served by an HTTP server, **it will not work if you open dist/index.html directly over file:// protocol**.
+HomerGX is a full static html/js dashboard, generated from the source in `/src` using webpack. It's meant to be served by an HTTP server, **it will not work if you open dist/index.html directly over file:// protocol**.
 
 See [documentation](docs/configuration.md) for information about the configuration (`assets/config.yml`) options.
 
@@ -135,3 +127,7 @@ npm run build
 ```
 
 Then your dashboard is ready to use in the `/dist` directory.
+
+## Credits
+- Original code and assets by the [Homer](https://github.com/bastienwirtz/homer) project team and it's contributors
+- Background images from [Unsplash](https://unsplash.com) content creators [Richard Horvath](https://unsplash.com/@orwhat), [SIMON LEE](https://unsplash.com/@simonppt)
