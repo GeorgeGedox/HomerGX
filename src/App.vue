@@ -68,7 +68,7 @@
           v-if="config.connectivityCheck"
           @network-status-update="offline = $event"
         />
-        <div v-if="!offline">
+        <div>
           <!-- Optional messages -->
           <Message :item="config.message" />
 

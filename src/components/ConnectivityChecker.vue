@@ -1,11 +1,15 @@
 <template>
-  <div v-if="offline" class="offline-message">
-    <i class="far fa-dizzy"></i>
-    <h1>
-      You're offline friend.
-      <span @click="checkOffline"><i class="fas fa-redo-alt"></i></span>
-    </h1>
-  </div>
+  <article v-if="offline" class="offline-message message is-danger">
+    <div class="message-header">
+      <span>Network issues</span>
+    </div>
+    <div class="py-4">
+      <p>
+        No network connection found.
+        <span @click="checkOffline">Retry <i class="fas fa-redo-alt"></i></span>
+      </p>
+    </div>
+  </article>
 </template>
 
 <script>
