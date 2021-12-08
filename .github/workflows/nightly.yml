@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  FULL_TAG: ghcr.io/georgegedox/homergx:preview 
 
 jobs:
   docker-image:
@@ -32,5 +32,5 @@ jobs:
           context: .
           push: true
           platforms: linux/arm/v7,linux/arm64/v8,linux/amd64
-          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:preview
+          tags: ${{ env.FULL_TAG }}
         
