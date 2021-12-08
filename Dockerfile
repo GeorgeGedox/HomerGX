@@ -5,10 +5,10 @@ FROM ${ARCH}node:lts-alpine as build-stage
 WORKDIR /app
 
 COPY package*.json ./
-RUN yarn install --frozen-lockfile
+RUN npm install
 
 COPY . .
-RUN yarn build
+RUN npm build
 
 # production stage
 FROM ${ARCH}alpine:3.11
