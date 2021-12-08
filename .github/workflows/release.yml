@@ -18,8 +18,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Install dependencies & build
         run: |
-          yarn install
-          yarn build
+          npm install
+          npm run build
       - name: Package artifact
         working-directory: "dist"
         run: zip -r ../homergx.zip ./*
