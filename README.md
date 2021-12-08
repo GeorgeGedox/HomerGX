@@ -29,6 +29,7 @@
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/georgegedox/homergx/Lint?label=lint)
 ![GitHub](https://img.shields.io/github/license/georgegedox/homergx)
 ![Netlify](https://img.shields.io/netlify/423ddc71-a623-49be-aec3-3bef054b2c79)
+
 ## Table of Contents
 - [Features over the original](#features)
 - [Getting started](#getting-started)
