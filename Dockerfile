@@ -1,5 +1,6 @@
+ARG ARCH=
 # build stage
-FROM node:lts-alpine as build-stage
+FROM ${ARCH}node:lts-alpine as build-stage
 
 WORKDIR /app
 
@@ -10,7 +11,7 @@ COPY . .
 RUN yarn build
 
 # production stage
-FROM alpine:3.11
+FROM ${ARCH}alpine:3.11
 
 ENV USER darkhttpd
 ENV GROUP darkhttpd
