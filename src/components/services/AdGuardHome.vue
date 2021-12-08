@@ -62,12 +62,12 @@ export default {
   },
   methods: {
     fetchStatus: async function () {
-      this.status = await this.fetch(`${this.item.url}/control/status`).catch((e) =>
+      this.status = await this.fetch("/control/status").catch((e) =>
         console.log(e)
       );
     },
     fetchStats: async function () {
-      this.stats = await this.fetch(`${this.item.url}/control/stats`).catch((e) =>
+      this.stats = await this.fetch("/control/stats").catch((e) =>
         console.log(e)
       );
     },
