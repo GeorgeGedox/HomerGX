@@ -9,7 +9,7 @@ must include a special `Access-Control-Allow-Origin: *` HTTP headers).
 If this happens your web console (`ctrl+shit+i` or `F12`) will be filled with this kind of errors:
 
 ```text
-Access to fetch at 'https://<target-service>' from origin 'https://<homer>' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Access to fetch at 'https://<target-service>' from origin 'https://<homergx>' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
 ```
 
 To resolve this, you can either:

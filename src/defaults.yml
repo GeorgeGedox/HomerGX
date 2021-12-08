@@ -2,7 +2,7 @@
 # Default configuration
 
 title: "Dashboard"
-subtitle: "Homer"
+subtitle: "HomerGX"
 
 header: true
 footer: '<p>HomerGX is a fork of <a href="https://github.com/bastienwirtz/homer">Homer</a> // Fork me on <a href="https://github.com/GeorgeGedox/HomerGX"><i class="fab fa-github-alt"></i></a></p>' # set false if you want to hide it.
@@ -15,6 +15,8 @@ colorSwitch:
 
 layoutSwitch:
   hideButton: false
+
+search: true
 
 theme: default
 colors:

@@ -1,13 +1,9 @@
 # Development
 
-If you want to contribute to Homer, please read the [contributing guidelines](https://github.com/bastienwirtz/homer/blob/main/CONTRIBUTING.md) first. 
+If you want to contribute to Homer, please read the [contributing guidelines](../CONTRIBUTING.md) first. 
 
 ```sh
-# Using yarn (recommended)
-yarn install
-yarn serve
-
-# **OR** Using npm
+# Using npm
 npm install
 npm run serve
 ```
@@ -17,7 +13,7 @@ npm run serve
 Custom services are small VueJs component (see `src/components/services/`) that add little features to a classic, "static", dashboard item. It should be very simple.
 A dashboard can contain a lot of items, so performance is very important. 
 
-The [`Generic`](https://github.com/bastienwirtz/homer/blob/main/src/components/services/Generic.vue) service provides a typical card layout which
+The [`Generic`](../src/components/services/Generic.vue) service provides a typical card layout which
 you can extend to add specific features. Unless you want a completely different design, extended the generic service is the recommended way. It gives you 3 [slots](https://vuejs.org/v2/guide/components-slots.html#Named-Slots) to extend: `icon`, `content` and `indicator`. 
 Each one is **optional**, and will display the usual information if omitted.
 

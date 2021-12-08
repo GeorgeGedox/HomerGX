@@ -1,6 +1,5 @@
 {
-  "name": "homer",
-  "version": "21.09.1",
+  "name": "homergx",
   "license": "Apache-2.0",
   "scripts": {
     "serve": "vue-cli-service serve",

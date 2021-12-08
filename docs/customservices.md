@@ -2,7 +2,7 @@
 
 Some service can use a specific a component that provides some extra features by adding a `type` key to the service yaml
 configuration. Available services are in `src/components/`. Here is an overview of all custom services that are available
-within Homer.
+within HomerGX.
 
 If you experiencing any issue, please have a look to the [troubleshooting](troubleshooting.md) page.
 
@@ -22,7 +22,7 @@ If you experiencing any issue, please have a look to the [troubleshooting](troub
 
 ## PiHole
 
-Using the PiHole service you can display info about your local PiHole instance right on your Homer dashboard.
+Using the PiHole service you can display info about your local PiHole instance right on your HomerGX dashboard.
 
 The following configuration is available for the PiHole service.
 

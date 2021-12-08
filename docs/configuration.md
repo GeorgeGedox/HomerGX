@@ -11,18 +11,35 @@ Title, icons, links, colors, and services can be configured in the `config.yml` 
 # Using this will ignore remaining config in this file
 # externalConfig: https://example.com/server-luci/config.yaml
 
-title: "App dashboard"
-subtitle: "Homer"
+title: "Dashboard"
+subtitle: "HomerGX"
 # documentTitle: "Welcome" # Customize the browser tab text
 logo: "assets/logo.png"
 # Alternatively a fa icon can be provided:
 # icon: "fas fa-skull-crossbones"
 
 header: true # Set to false to hide the header
-footer: '<p>Created with <span class="has-text-danger">❤️</span> with <a href="https://bulma.io/">bulma</a>, <a href="https://vuejs.org/">vuejs</a> & <a href="https://fontawesome.com/">font awesome</a> // Fork me on <a href="https://github.com/bastienwirtz/homer"><i class="fab fa-github-alt"></i></a></p>' # set false if you want to hide it.
+footer: '<p>HomerGX is a fork of <a href="https://github.com/bastienwirtz/homer">Homer</a> // Fork me on <a href="https://github.com/GeorgeGedox/HomerGX"><i class="fab fa-github-alt"></i></a></p>' # set false if you want to hide the footer
 
 columns: "3" # "auto" or number (must be a factor of 12: 1, 2, 3, 4, 6, 12)
 connectivityCheck: true # whether you want to display a message when the apps are not accessible anymore (VPN disconnected for example)
+
+# Optional color switcher button config
+colorSwitch:
+  # Force auto/light/dark mode (0 - auto|1 - light|2 - dark)
+  forceMode: 0
+  # Hide the button?
+  hideButton: false
+
+# Optional layout switcher button config
+layoutSwitch:
+  # Force default layout mode (vertical|horizontal)
+  layout: 'horizontal'
+  # Hide the button?
+  hideButton: false
+
+# Enable or disable the searchbar (true|false)
+search: true
 
 # Optional: Proxy / hosting option
 proxy:
@@ -42,33 +59,37 @@ theme: default # 'default' or one of the themes available in 'src/assets/themes'
 # if you want to change only some of the colors, feel free to remove all unused key.
 colors:
   light:
-    highlight-primary: "#3367d6"
-    highlight-secondary: "#4285f4"
-    highlight-hover: "#5a95f5"
-    background: "#f5f5f5"
-    card-background: "#ffffff"
-    text: "#363636"
-    text-header: "#424242"
-    text-title: "#303030"
-    text-subtitle: "#424242"
-    card-shadow: rgba(0, 0, 0, 0.1)
-    link: "#3273dc"
-    link-hover: "#363636"
-    background-image: "assets/your/light/bg.png"
+    border-radius: 14px
+    highlight-primary: "rgba(232, 233, 255, 0.87)"
+    highlight-secondary: "#4d48e8"
+    highlight-hover: "rgba(232, 233, 255, 1)"
+    background: "rgba(232, 233, 255, 1)"
+    card-background: rgba(232, 233, 255, 0.87)
+    footer-background: "rgba(232, 233, 255, 1)"
+    text: "#ffffff"
+    text-header: "#fafafa"
+    text-title: "#00044b"
+    text-subtitle: "#161839"
+    card-shadow: rgba(0, 0, 0, 0.5)
+    link: "#3255dc"
+    link-hover: "#1830ae"
+    background-image: "url(../assets/img/wall1.jpg)"
   dark:
-    highlight-primary: "#3367d6"
-    highlight-secondary: "#4285f4"
-    highlight-hover: "#5a95f5"
-    background: "#131313"
-    card-background: "#2b2b2b"
+    border-radius: 14px
+    highlight-primary: rgba(10, 10, 70, 0.84)
+    highlight-secondary: "#9F96EA"
+    highlight-hover: rgba(10, 10, 70, 1)
+    background: "rgba(10, 10, 70, 1)"
+    card-background: "rgba(10, 10, 70, 0.84)"
+    footer-background: "rgba(10, 10, 70, 1)"
     text: "#eaeaea"
-    text-header: "#ffffff"
+    text-header: "#eaeaea"
     text-title: "#fafafa"
-    text-subtitle: "#f5f5f5"
-    card-shadow: rgba(0, 0, 0, 0.4)
-    link: "#3273dc"
-    link-hover: "#ffdd57"
-    background-image: "assets/your/dark/bg.png"
+    text-subtitle: "#b2acdb"
+    link: "#b2acdb"
+    link-hover: "#fff"
+    background-image: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../assets/img/wall1.jpg)"
+
 
 # Optional message
 message:
@@ -92,13 +113,13 @@ message:
 # Optional navbar
 # links: [] # Allows for navbar (dark mode, layout, and search) without any links
 links:
-  - name: "Link 1"
+  - name: "Contribute"
     icon: "fab fa-github"
-    url: "https://github.com/bastienwirtz/homer"
-    target: "_blank" # optional html tag target attribute
-  - name: "link 2"
+    url: "https://github.com/GeorgeGedox/HomerGX"
+    target: "_blank" # optional html a tag target attribute
+  - name: "My blog"
     icon: "fas fa-book"
-    url: "https://github.com/bastienwirtz/homer"
+    url: "https://georgev.design/blog"
   # this will link to a second homer page that will load config from page2.yml and keep default config values as in config.yml file
   # see url field and assets/page.yml used in this example:
   - name: "Second Page"

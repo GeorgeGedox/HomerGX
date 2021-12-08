@@ -1,11 +1,12 @@
 ---
+# This is an example of how to deploy HomerGX using docker-compose
 version: "2"
 services:
-  homer:
-    image: b4bz/homer
+  homergx:
+    image: ghcr.io/georgegedox/homergx:latest
     #To build from source, comment previous line and uncomment below
     #build: .
-    container_name: homer
+    container_name: homergx
     volumes:
       - /your/local/assets/:/www/assets
     ports:

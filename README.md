@@ -1,23 +1,19 @@
 <h1 align="center">
  <img
-  width="180"
-  alt="Homer's donut"
+  width="120"
+  alt="HomerGX"
   src="https://raw.githubusercontent.com/GeorgeGedox/HomerGX/master/public/logo.png">
     <br/>
     HomerGX
 </h1>
-
 <p align="center">
- <strong>
-   <a href="https://homer-demo.netlify.app">Demo</a>
-  •
-  <a href="#getting-started">Getting started</a>
- </strong>
-</p>
-<p align="center">
- <a href="https://opensource.org/licenses/Apache-2.0"><img
-  alt="License: Apache 2"
-  src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"></a>
+  <strong>
+    <a href="https://homergx-demo.netlify.app/">Demo</a>
+    |
+    <a href="https://github.com/GeorgeGedox/HomerGX/pkgs/container/homergx">Docker image</a>
+    |
+    <a href="#getting-started">Getting started</a>
+  </strong>
 </p>
 
 <details open>
@@ -29,8 +25,11 @@
   <img alt="Homer Theme" src="https://raw.githubusercontent.com/GeorgeGedox/HomerGX/master/docs/screenshot-dark.png">
 </details>
 
+![Build status](https://img.shields.io/github/workflow/status/georgegedox/homergx/Create%20Release)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/georgegedox/homergx/Lint?label=lint)
+![GitHub](https://img.shields.io/github/license/georgegedox/homergx)
+![Netlify](https://img.shields.io/netlify/423ddc71-a623-49be-aec3-3bef054b2c79)
 ## Table of Contents
-
 - [Features over the original](#features)
 - [Getting started](#getting-started)
 - [Configuration](docs/configuration.md)
@@ -40,7 +39,6 @@
 - [Troubleshooting](docs/troubleshooting.md)
 
 ## Features over the original
-
 The project was forked at version `v21.09.2`, some of the things below might not hold true anymore
 
 - Cleaner code
@@ -50,8 +48,6 @@ The project was forked at version `v21.09.2`, some of the things below might not
 - Modern theme already bundled in
 
 ### Planned features
-
-- [Authentik](https://goauthentik.io/) integration
 - More services
 - More bundled themes
 
@@ -66,11 +62,7 @@ See [documentation](docs/configuration.md) for information about the configurati
 To launch container:
 
 ```sh
-docker run -d \
-  -p 8080:8080 \
-  -v </your/local/assets/>:/www/assets \
-  --restart=always \
-  b4bz/homer:latest
+docker run -d -p 8080:8080 -v </your/local/assets/>:/www/assets --restart=always ghcr.io/georgegedox/homergx:latest
 ```
 
 Default assets will be automatically installed in the `/www/assets` directory. Use `UID` and/or `GID` env var to change the assets owner (`docker run -e "UID=1000" -e "GID=1000" [...]`).
@@ -102,12 +94,12 @@ environment:
   - GID=1000
 ```
 
-### Using the release tarball (prebuilt, ready to use)
+### Using the release zip (prebuilt, ready to use)
 
-Download and extract the latest release (`homer.zip`) from the [release page](https://github.com/bastienwirtz/homer/releases), rename the `assets/config.yml.dist` file to `assets/config.yml`, and put it behind a web server.
+Download and extract the latest release (`homergx.zip`) from the [release page](https://github.com/GeorgeGedox/HomerGX/releases), rename the `assets/config.yml.dist` file to `assets/config.yml`, and put it on a web server.
 
 ```sh
-wget https://github.com/bastienwirtz/homer/releases/latest/download/homer.zip
+wget https://github.com/GeorgeGedox/HomerGX/releases/latest/download/homergx.zip
 unzip homer.zip
 cd homer
 cp assets/config.yml.dist assets/config.yml
@@ -117,16 +109,12 @@ npx serve # or python -m http.server 8010 or apache, nginx ...
 ### Build manually
 
 ```sh
-# Using yarn (recommended)
-yarn install
-yarn build
-
-# **OR** Using npm
+# Using npm
 npm install
 npm run build
 ```
 
-Then your dashboard is ready to use in the `/dist` directory.
+Your dashboard is now ready for use in the `/dist` directory.
 
 ## Credits
 - Original code and assets by the [Homer](https://github.com/bastienwirtz/homer) project team and it's contributors

@@ -1,8 +1,6 @@
 # Tips & Tricks
 
-Here is a collection of neat tips and tricks that Homer users have come up with!
-
-## Use Homer as a custom "new tab" page
+## Use HomerGX as a custom "new tab" page
 
 #### `by @vosdev`
 
@@ -75,20 +73,20 @@ Great if you have a lot of services or a lot of tags!
 
 #### `by @JamiePhonic`
 
-Homer doesn't yet provide a way to edit your configuration from inside Homer itself, but that doesn't mean it can't be done!
+HomerGX doesn't yet provide a way to edit your configuration from inside Homer itself, but that doesn't mean it can't be done!
 
 You can setup and use [Code-Server](https://github.com/cdr/code-server) to edit your `config.yml` file from anywhere!
 
-If you're running Homer in docker, you can setup a Code-Server container and pass your homer config directory into it.
-Simply pass your homer config directory as an extra -v parameter to your code-server container:
+If you're running HomerGX in docker, you can setup a Code-Server container and pass your homer config directory into it.
+Simply pass your HomerGX config directory as an extra -v parameter to your code-server container:
 
 ```sh
--v '/your/local/homer/config-dir/':'/config/homer':'rw'
+-v '/your/local/homergx/config-dir/':'/config/homergx':'rw'
 ```
 
-This will map your homer config directory (For example, /docker/appdata/homer/) into code-server's `/config/` directory, in a sub folder called `homer`
+This will map your HomerGX config directory (For example, /docker/appdata/homergx/) into code-server's `/config/` directory, in a sub folder called `homergx`
 
-As a bonus, Code-Server puts the "current folder" as a parameter in the URL bar, so you could add a `links:` entry in Homer that points to your code-server instance with the directory pre-filled for essentially 1 click editing!
+As a bonus, Code-Server puts the "current folder" as a parameter in the URL bar, so you could add a `links:` entry in HomerGX that points to your code-server instance with the directory pre-filled for essentially 1 click editing!
 
 For example:
 
@@ -96,11 +94,11 @@ For example:
 links:
   - name: Edit config
     icon: fas fa-cog
-    url: https://vscode.example.net/?folder=/config/homer
+    url: https://vscode.example.net/?folder=/config/homergx
     target: "_blank" # optional html tag target attribute
 ```
 
-where the path after `?folder=` is the path to the folder where you mounted your homer config INSIDE the Code-Server container.
+where the path after `?folder=` is the path to the folder where you mounted your HomerGX config INSIDE the Code-Server container.
 
 ### Example Code-Server docker create command
 
@@ -114,16 +112,26 @@ docker create \
   -e SUDO_PASSWORD={YOUR SUDO_PASSWORD} `#optional` \
   -p 8443:8443 \
   -v /path/to/appdata/config:/config \
-  -v /your/local/homer/config-dir/:/config/homer \
+  -v /your/local/homergx/config-dir/:/config/homergx \
   --restart unless-stopped \
   linuxserver/code-server
 ```
 
 ## Get the news headlines in Homer
+#### `by @JamiePhonic`
 
+Homer allows you to set a "message" that will appear at the top of the page, however, you can also supply a `url:`.
+
+If the URL you specified returns a JSON object that defines a `title` and `content` item, homer will replace these values from your `config.yml` with the ones in the returned object.
+
+So, using [Node-Red](https://nodered.org/docs/getting-started/) and a quick flow, you can process an RSS feed to replace the message with a news item!
+
+To get started, simply import [this flow](https://flows.nodered.org/flow/4b6406c9a684c26ace0430dd1826e95d) into your Node-Red instance and change the RSS feed in the "Get News RSS Feed" node to one of your choosing!
+
+So far, the flow has been tested with BBC News and Sky News, however it should be easy to modify the flow to work with other RSS feeds if they don't work out of the box!
 ### Mapping Fields
 
-Most times, the url you're getting headlines from follows a different schema than the one expected by Homer.
+Most times, the url you're getting headlines from follows a different schema than the one expected by HomerGX.
 
 For example, if you would like to show jokes from ChuckNorris.io, you'll find that the url <https://api.chucknorris.io/jokes/random> is giving you info like this:
 
@@ -178,15 +186,3 @@ message:
   title: "Chuck Norris Facts!"
   content: "Message could not be loaded"
 ```
-
-#### `by @JamiePhonic`
-
-Homer allows you to set a "message" that will appear at the top of the page, however, you can also supply a `url:`.
-
-If the URL you specified returns a JSON object that defines a `title` and `content` item, homer will replace these values from your `config.yml` with the ones in the returned object.
-
-So, using [Node-Red](https://nodered.org/docs/getting-started/) and a quick flow, you can process an RSS feed to replace the message with a news item!
-
-To get started, simply import [this flow](https://flows.nodered.org/flow/4b6406c9a684c26ace0430dd1826e95d) into your Node-Red instance and change the RSS feed in the "Get News RSS Feed" node to one of your choosing!
-
-So far, the flow has been tested with BBC News and Sky News, however it should be easy to modify the flow to work with other RSS feeds if they don't work out of the box!
