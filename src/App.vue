@@ -54,6 +54,7 @@
         <SearchInput
           class="navbar-item navbar-item-nobg is-inline-block-mobile"
           v-if="config.search"
+          :hotkey="config.searchHotkey"
           @input="filterServices"
           @search-focus="showMenu = true"
           @search-open="navigateToFirstService"

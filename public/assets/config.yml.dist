@@ -12,6 +12,8 @@ footer: '<p>HomerGX is a fork of <a href="https://github.com/bastienwirtz/homer"
 
 # Enable searchbar
 search: true
+# Optional: Different hotkey for search, defaults to "/"
+# searchHotkey: "Shift"
 
 # Optional theme customization
 theme: default

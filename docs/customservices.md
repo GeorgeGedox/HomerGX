@@ -91,13 +91,14 @@ API key can be generated in Settings > Administration > Auth Tokens
 
 ## Ping
 
-For Ping you need to set the type to Ping and provide a url.
+This service will just ping the url and show it's status, just set the type to `Ping`.
 
 ```yaml
 - name: "Awesome app"
   type: Ping
   logo: "assets/tools/sample.png"
-  subtitle: "Bookmark example" tag: "app" 
+  subtitle: "Bookmark example"
+  tag: "app" 
   url: "https://www.reddit.com/r/selfhosted/" 
 ```
 

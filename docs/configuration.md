@@ -40,6 +40,8 @@ layoutSwitch:
 
 # Enable or disable the searchbar (true|false)
 search: true
+# Optional: Different hotkey for search, defaults to "/"
+# searchHotkey: "Shift"
 
 # Optional: Proxy / hosting option
 proxy:
