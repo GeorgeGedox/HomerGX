@@ -48,12 +48,15 @@
   .navbar {
     background-color: transparent;
 
+    .navbar-brand {
+      margin-left: 0 !important;
+    }
+
     .navbar-item {
       background-color: var(--highlight-primary);
       border-radius: var(--border-radius);
       color: var(--link) !important;
-      padding: 8px 12px;
-      margin-right: 0.3rem;
+      margin-right: 0.5rem;
 
       &:last-child {
         margin-right: 0;

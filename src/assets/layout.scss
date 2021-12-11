@@ -33,12 +33,8 @@ body {
 }
 
 #main-section {
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
   padding: 0;
-
-  .column {
-    padding: 0.25rem;
-  }
 
   h2 {
     padding-bottom: 0px;
@@ -64,6 +60,7 @@ body {
 
     .message-header {
       font-weight: bold;
+      background-color: #30364d;
       border-radius: var(--border-radius) var(--border-radius) 0 0;
     }
 
@@ -71,6 +68,11 @@ body {
       color: var(--text);
       border: none;
     }
+  }
+
+  .column.service {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
   }
 }
 
@@ -105,10 +107,6 @@ body {
 }
 
 .no-footer {
-  #main-section {
-    margin-bottom: 0;
-  }
-
   .footer {
     display: none;
   }

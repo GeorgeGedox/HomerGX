@@ -26,14 +26,14 @@ colors:
     background: "rgba(232, 233, 255, 1)"
     card-background: rgba(232, 233, 255, 0.87)
     footer-background: "rgba(232, 233, 255, 1)"
-    text: "#ffffff"
+    text: "#00044b"
     text-header: "#fafafa"
     text-title: "#00044b"
     text-subtitle: "#161839"
     card-shadow: rgba(0, 0, 0, 0.5)
     link: "#3255dc"
     link-hover: "#1830ae"
-    background-image: "url(../assets/img/wall1.jpg)"
+    background-image: "url(../assets/img/wall2.jpg)"
   dark:
     border-radius: 14px
     highlight-primary: rgba(10, 10, 70, 0.84)

@@ -74,7 +74,10 @@
           <Message :item="config.message" />
 
           <!-- Horizontal layout -->
-          <div v-if="!vlayout || filter" class="columns is-multiline">
+          <div
+            v-if="!vlayout || filter"
+            class="columns is-multiline is-variable is-1"
+          >
             <template v-for="(group, groupIndex) in services">
               <h2
                 v-if="group.name"
@@ -94,7 +97,7 @@
                 :key="'group-' + groupIndex + '-' + index"
                 :item="item"
                 :proxy="config.proxy"
-                :class="['column', `is-${12 / config.columns}`]"
+                :class="['column', 'service', `is-${12 / config.columns}`]"
               />
             </template>
           </div>
@@ -123,6 +126,7 @@
                 :key="'group-' + groupIndex + '-' + index"
                 :item="item"
                 :proxy="config.proxy"
+                class="service"
               />
             </div>
           </div>
