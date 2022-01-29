@@ -16,14 +16,9 @@
   </strong>
 </p>
 
-<details open>
-<summary>Light Mode Preview</summary>
-  <img alt="Homer Theme" src="https://raw.githubusercontent.com/GeorgeGedox/HomerGX/master/docs/screenshot-light.png">
-</details>
-<details>
-<summary>Dark Mode Preview</summary>
-  <img alt="Homer Theme" src="https://raw.githubusercontent.com/GeorgeGedox/HomerGX/master/docs/screenshot-dark.png">
-</details>
+Light Mode             |  Dark Mode
+:-------------------------:|:-------------------------:
+![](https://raw.githubusercontent.com/GeorgeGedox/HomerGX/master/docs/screenshot-light.png)  |  ![](https://raw.githubusercontent.com/GeorgeGedox/HomerGX/master/docs/screenshot-dark.png)
 
 ![Build status](https://img.shields.io/github/workflow/status/georgegedox/homergx/Create%20Release)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/georgegedox/homergx/Lint?label=lint)
@@ -119,4 +114,4 @@ Your dashboard is now ready for use in the `/dist` directory.
 
 ## Credits
 - Original code and assets by the [Homer](https://github.com/bastienwirtz/homer) project team and it's contributors
-- Background images from [Unsplash](https://unsplash.com) content creators [Richard Horvath](https://unsplash.com/@orwhat), [SIMON LEE](https://unsplash.com/@simonppt)
+- Background images from [Unsplash](https://unsplash.com) content creators [Richard Horvath](https://unsplash.com/@orwhat), [SIMON LEE](https://unsplash.com/@simonppt), [Voicu Apostol](https://unsplash.com/@cerpow)

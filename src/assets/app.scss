@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 @import "./webfonts/webfonts.scss";
-@import "bulma";
+@import "~bulma";
 
 // Mixins
 @mixin ellipsis() {

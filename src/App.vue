@@ -63,7 +63,7 @@
       </Navbar>
     </div>
 
-    <section id="main-section" class="section">
+    <section id="main-section">
       <div v-cloak class="container">
         <ConnectivityChecker
           v-if="config.connectivityCheck"

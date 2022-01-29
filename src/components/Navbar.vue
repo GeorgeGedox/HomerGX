@@ -15,11 +15,14 @@
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </a>
+          <div class="mobile-slots is-hidden-desktop">
+            <slot></slot>
+          </div>
         </div>
         <div class="navbar-menu" :class="{ 'is-active': showMenu }">
           <div class="navbar-start">
             <a
-              class="navbar-item"
+              class="navbar-item menu-item"
               rel="noreferrer"
               v-for="(link, key) in links"
               :key="key"
@@ -33,7 +36,7 @@
               {{ link.name }}
             </a>
           </div>
-          <div class="navbar-end">
+          <div class="navbar-end is-hidden-touch">
             <slot></slot>
           </div>
         </div>

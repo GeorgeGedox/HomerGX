@@ -38,6 +38,7 @@
       }
 
       img {
+        vertical-align: bottom;
         padding: 10px;
         max-height: 70px;
         max-width: 70px;
@@ -52,11 +53,24 @@
       margin-left: 0 !important;
     }
 
+    .navbar-burger {
+      color: var(--link);
+      background-color: var(--card-background);
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      margin-left: 0;
+    }
+    
+    .mobile-slots {
+      margin-left: auto;
+      display: flex;
+    }
+
     .navbar-item {
       background-color: var(--highlight-primary);
       border-radius: var(--border-radius);
       color: var(--link) !important;
       margin-right: 0.5rem;
+      display: flex !important;
 
       &:last-child {
         margin-right: 0;
@@ -69,6 +83,13 @@
 
       &.navbar-item-nobg {
         background: none !important;
+      }
+    }
+
+    .menu-item {
+      @include touch {
+        border-radius: 0;
+        margin-right: 0;
       }
     }
 
