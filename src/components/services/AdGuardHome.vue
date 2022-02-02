@@ -7,13 +7,15 @@
           {{ item.subtitle }}
         </template>
         <template v-else-if="stats">
-          {{ percentage }}&percnt; blocked
+          Total queries blocked: {{ percentage }}&percnt;
         </template>
       </p>
     </template>
     <template #indicator>
-      <div class="status" :class="protection">
-        {{ protection }}
+      <div class="details">
+        <div class="status" :class="running">Status</div>
+        <div class="status" :class="protection">Protection</div>
+        <div class="status" :class="running">{{ version }}</div>
       </div>
     </template>
   </Generic>
@@ -51,6 +53,16 @@ export default {
     protection: function () {
       if (this.status) {
         return this.status.protection_enabled ? "enabled" : "disabled";
+      } else return "unknown";
+    },
+    running: function () {
+      if (this.status) {
+        return this.status.running ? "enabled" : "disabled";
+      } else return "unknown";
+    },
+    version: function () {
+      if (this.status) {
+        return this.status.version;
       } else return "unknown";
     },
   },
