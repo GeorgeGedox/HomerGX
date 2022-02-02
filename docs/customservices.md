@@ -55,7 +55,7 @@ If for some reason your city can't be found by entering the name in the `locatio
 ## Medusa
 
 This service displays News (grey), Warning (orange) or Error (red) notifications bubbles from the Medusa application.
-Two lines are needed in the config.yml :
+Two lines are needed in the config.yml:
 
 ```yaml
   type: "Medusa"
@@ -68,7 +68,7 @@ The Medusa API key can be found in General configuration > Interface. It is need
 ## Sonarr/Radarr
 
 This service displays Activity (blue), Warning (orange) or Error (red) notifications bubbles from the Radarr/Sonarr application.
-Two lines are needed in the config.yml :
+Two lines are needed in the config.yml:
 
 ```yaml
   type: "Radarr" or "Sonarr"
@@ -77,6 +77,15 @@ Two lines are needed in the config.yml :
 
 The url must be the root url of Radarr/Sonarr application.
 The Radarr/Sonarr API key can be found in Settings > General. It is needed to access the API.
+If you are using an older version of Radarr or Sonarr which don't support the new V3 api endpoints, add the following line to your service config `legacyApi: true`, example: 
+
+```yaml
+- name: "Radarr"
+  type: "Radarr"
+  url: "http://localhost:7878/"
+  apikey: "MY-SUPER-SECRET-API-KEY"
+  legacyApi: true
+```
 
 ## PaperlessNG
 
