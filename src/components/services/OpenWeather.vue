@@ -22,9 +22,15 @@
               <div v-else>
                 <p class="title is-4">{{ name }}</p>
                 <p class="subtitle is-6">
-                  {{ temp | tempSuffix(this.item.units) }}
+                  Feels like
+                  {{ feels_like | tempSuffix(this.item.units) }}
+                  outside.
+                  {{ conditions | capitalize() }}
                 </p>
               </div>
+            </div>
+            <div class="temperature">
+              {{ temp | tempSuffix(this.item.units) }}
             </div>
           </div>
           <div class="tag" :class="item.tagstyle" v-if="item.tag">
@@ -77,6 +83,7 @@ export default {
           this.id = weather.id;
           this.name = weather.name;
           this.temp = parseInt(weather.main.temp).toFixed(1);
+          this.feels_like = parseInt(weather.main.feels_like).toFixed(1);
           this.icon = weather.weather[0].icon;
           this.conditions = weather.weather[0].description;
         })
@@ -98,11 +105,24 @@ export default {
       }
       return `${value} ${unit}`;
     },
+    capitalize: function (value) {
+      if (!value) return "";
+      value = value.toString();
+      return value.charAt(0).toUpperCase() + value.slice(1);
+    },
   },
 };
 </script>
 
 <style scoped lang="scss">
+.media {
+  .temperature {
+    align-self: center;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--text-title);
+  }
+}
 // Add a border around the weather image.
 // Otherwise the image is not always distinguishable.
 .media-left {
